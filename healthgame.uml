@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Rt-6wEIWEeaPCu-Av6Ancw" name="KB">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Rt-6wEIWEeaPCu-Av6Ancw" name="KB">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_SBklIEIWEeaPCu-Av6Ancw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UkP9QEIWEeaPCu-Av6Ancw" name="Evidence">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vd_MMEIXEeaPCu-Av6Ancw" name="state" type="_SYs2QEIXEeaPCu-Av6Ancw" aggregation="shared" association="_Vc5AAEIXEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tYtVYEIWEeaPCu-Av6Ancw" name="Symptom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_JuA-EEIXEeaPCu-Av6Ancw" general="_UkP9QEIWEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_K__jUEIXEeaPCu-Av6Ancw" name="Exam">
+    <generalization xmi:type="uml:Generalization" xmi:id="_NKym8EIXEeaPCu-Av6Ancw" general="_UkP9QEIWEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SYs2QEIXEeaPCu-Av6Ancw" name="State"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Vc5AAEIXEeaPCu-Av6Ancw" memberEnd="_Vd_MMEIXEeaPCu-Av6Ancw _Vd_MMUIXEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Vd9XAEIXEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Vd9-EEIXEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Vd_MMUIXEeaPCu-Av6Ancw" name="character" type="_UkP9QEIWEeaPCu-Av6Ancw" association="_Vc5AAEIXEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_58DrwEIXEeaPCu-Av6Ancw" name="Case">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_70yH8UIXEeaPCu-Av6Ancw" name="character" type="_UkP9QEIWEeaPCu-Av6Ancw" aggregation="shared" association="_70xg4EIXEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_70xg4EIXEeaPCu-Av6Ancw" memberEnd="_70yH8UIXEeaPCu-Av6Ancw _70yH8kIXEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_70xg4UIXEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_70yH8EIXEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_70yH8kIXEeaPCu-Av6Ancw" name="case" type="_58DrwEIXEeaPCu-Av6Ancw" association="_70xg4EIXEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EwbNQEIYEeaPCu-Av6Ancw" name="Patient"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LAljwEIYEeaPCu-Av6Ancw" name="Patient_Case">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OAtF0EIYEeaPCu-Av6Ancw" name="patient" type="_EwbNQEIYEeaPCu-Av6Ancw" association="_OAsewEIYEeaPCu-Av6Ancw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PYJZ4UIYEeaPCu-Av6Ancw" name="case" type="_58DrwEIXEeaPCu-Av6Ancw" association="_PYILwEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OAsewEIYEeaPCu-Av6Ancw" memberEnd="_OAtF0EIYEeaPCu-Av6Ancw _OAtF0UIYEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OAsewUIYEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OAsewkIYEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OAtF0UIYEeaPCu-Av6Ancw" name="patient_case" type="_LAljwEIYEeaPCu-Av6Ancw" association="_OAsewEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PYILwEIYEeaPCu-Av6Ancw" memberEnd="_PYJZ4UIYEeaPCu-Av6Ancw _PYJZ4kIYEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PYIy0EIYEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PYJZ4EIYEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_PYJZ4kIYEeaPCu-Av6Ancw" name="patient_case" type="_LAljwEIYEeaPCu-Av6Ancw" association="_PYILwEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bWHAsEIYEeaPCu-Av6Ancw" name="SpecificCase">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_hZF20EIYEeaPCu-Av6Ancw" name="patient_case" type="_LAljwEIYEeaPCu-Av6Ancw" association="_hZFPwEIYEeaPCu-Av6Ancw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nHY2YUIYEeaPCu-Av6Ancw" name="character" type="_UkP9QEIWEeaPCu-Av6Ancw" association="_nHYPUEIYEeaPCu-Av6Ancw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ohom0UIYEeaPCu-Av6Ancw" name="state" type="_SYs2QEIXEeaPCu-Av6Ancw" association="_ohn_wEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hZFPwEIYEeaPCu-Av6Ancw" memberEnd="_hZF20EIYEeaPCu-Av6Ancw _hZF20UIYEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hZFPwUIYEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hZFPwkIYEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hZF20UIYEeaPCu-Av6Ancw" name="specificcase" type="_bWHAsEIYEeaPCu-Av6Ancw" association="_hZFPwEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_nHYPUEIYEeaPCu-Av6Ancw" memberEnd="_nHY2YUIYEeaPCu-Av6Ancw _nHY2YkIYEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nHYPUUIYEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nHY2YEIYEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_nHY2YkIYEeaPCu-Av6Ancw" name="specificcase" type="_bWHAsEIYEeaPCu-Av6Ancw" association="_nHYPUEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ohn_wEIYEeaPCu-Av6Ancw" memberEnd="_ohom0UIYEeaPCu-Av6Ancw _ohom0kIYEeaPCu-Av6Ancw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ohn_wUIYEeaPCu-Av6Ancw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ohom0EIYEeaPCu-Av6Ancw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ohom0kIYEeaPCu-Av6Ancw" name="specificcase" type="_bWHAsEIYEeaPCu-Av6Ancw" association="_ohn_wEIYEeaPCu-Av6Ancw"/>
+  </packagedElement>
 </uml:Model>
